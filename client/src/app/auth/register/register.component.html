@@ -1,0 +1,33 @@
+<div class="grid h-screen place-items-center" >
+    <form *ngIf="formGroup" [formGroup]="formGroup" class="text-center bg-orange-300 p-11 rounded-md">
+        <div class="flex gap-3">
+            <mat-form-field appearance="fill">
+                <mat-label>Full Name</mat-label>
+                <input type="text" formControlName="fullName" matInput placeholder="My Youssef">
+            </mat-form-field>
+            <mat-form-field appearance="fill">
+                <mat-label>Username</mat-label>
+                <input type="text" formControlName="username" matInput placeholder="aslukili">
+            </mat-form-field>
+        </div>
+        <mat-form-field class="w-full" appearance="fill">
+            <mat-label>Password</mat-label>
+            <input type="password" formControlName="password" matInput placeholder="*********">
+        </mat-form-field>
+        <br>
+        <mat-form-field class="w-full" appearance="fill">
+            <mat-label>Email</mat-label>
+            <input type="email" formControlName="email" matInput placeholder="user@domain.com">
+        </mat-form-field>  
+        <mat-form-field class="w-full" appearance="fill">
+            <mat-label>Phone Number</mat-label>
+            <input type="phone" formControlName="phone" matInput placeholder="0987876654">
+        </mat-form-field> 
+      <br>
+      <div class="flex items-center justify-center">
+        <button mat-flat-button color="primary" (click)="onFormSubmit()" type="submit"> REGISTER </button>
+      </div>
+      <br>
+      <p class="text-center">already have an account? <a class="cursor-pointer font-medium text-blue-600 dark:text-blue-500 hover:underline" routerLink="/login">login here</a></p>
+    </form>
+  </div>

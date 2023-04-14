@@ -1,0 +1,19 @@
+<div class="grid h-screen place-items-center">
+    <form *ngIf="formGroup" [formGroup]="formGroup" class="text-center bg-orange-300 p-11 rounded-md">
+      <mat-form-field appearance="fill">
+        <mat-label>Username</mat-label>
+        <input formControlName="username" matInput placeholder="username">
+      </mat-form-field>
+      <br>
+      <mat-form-field appearance="fill">
+        <mat-label>Password</mat-label>
+        <input type="password" formControlName="password" matInput placeholder="password">
+      </mat-form-field>
+      <br>
+      <div class="flex items-center justify-center">
+        <button mat-flat-button color="primary" (click)="onFormSubmit()" type="submit"> LOGIN </button>
+      </div>
+      <br>
+      <p>don't have an account? <a class="font-medium text-blue-600 dark:text-blue-500 hover:underline" routerLink="/register">register here</a></p>
+    </form>
+  </div>

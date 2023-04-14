@@ -1,0 +1,22 @@
+{
+  "groups": [
+    {
+      "name": "travelplanner.client",
+      "type": "com.malkfilipp.travelplanner.config.ClientProperties",
+      "sourceType": "com.malkfilipp.travelplanner.config.ClientProperties"
+    }
+  ],
+  "properties": [
+    {
+      "name": "travelplanner.client.max-age",
+      "type": "java.lang.Integer",
+      "sourceType": "com.malkfilipp.travelplanner.config.ClientProperties"
+    },
+    {
+      "name": "travelplanner.client.origin",
+      "type": "java.lang.String",
+      "sourceType": "com.malkfilipp.travelplanner.config.ClientProperties"
+    }
+  ],
+  "hints": []
+}
