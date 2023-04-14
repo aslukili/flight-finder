@@ -31,7 +31,7 @@ export class RegisterComponent implements OnInit, OnDestroy {
   ngOnInit(): void {
     // if there is already a sigged in  user the redirect to profile
     if(this.authService.isUserLoggedIn()){
-      this.router.navigateByUrl('/profile'); 
+      this.router.navigateByUrl('/home'); 
     }
 
 

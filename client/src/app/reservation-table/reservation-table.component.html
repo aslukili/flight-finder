@@ -1,0 +1,36 @@
+<table *ngIf="dataSource.length > 0" mat-table [dataSource]="dataSource" class="mat-elevation-z8">
+
+  <!--- Note that these columns can be defined in any order.
+        The actual rendered columns are set as a property on the row definition" -->
+
+  <!-- Check in Column -->
+  <ng-container matColumnDef="Departure">
+    <th mat-header-cell *matHeaderCellDef> Departure airport </th>
+    <td mat-cell *matCellDef="let element"> {{element.flight.departureAirport.name}} </td>
+  </ng-container>
+
+  <!-- Check out Column -->
+  <ng-container matColumnDef="Destination">
+    <th mat-header-cell *matHeaderCellDef> Destination airport </th>
+    <td mat-cell *matCellDef="let element"> {{element.flight.arrivalAirport.name}} </td>
+  </ng-container>
+
+  <!-- price Column -->
+  <ng-container matColumnDef="Airline">
+    <th mat-header-cell *matHeaderCellDef> Airline </th>
+    <td mat-cell *matCellDef="let element"> {{element.flight.airline.name}} </td>
+  </ng-container>
+
+  <!-- price Column -->
+  <ng-container matColumnDef="Aircraft">
+    <th mat-header-cell *matHeaderCellDef> Aircraft </th>
+    <td mat-cell *matCellDef="let element"> {{ element.flight.aircraft.name }} </td>
+  </ng-container>
+
+  <!-- actions Column -->
+
+  <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+  <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+</table>
+<p *ngIf="!dataSource?.length">Your reservations will appear here</p>
+

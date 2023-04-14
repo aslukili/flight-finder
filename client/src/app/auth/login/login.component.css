@@ -1,0 +1,12 @@
+.grid {
+    display: grid;
+  }
+  
+  .h-screen {
+    height: 100vh;
+  }
+  
+  .place-items-center {
+    justify-items: center;
+    align-items: center;
+  }

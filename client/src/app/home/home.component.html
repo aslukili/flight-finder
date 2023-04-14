@@ -1,7 +1,8 @@
-<mat-toolbar color="primary">
+<mat-toolbar color="primary" style="display: flex; justify-content: space-between">
     <span>{{title}}</span>
+  <button (click)="logout()">
+    logout
+  </button>
   </mat-toolbar>
-  
+
   <app-ticket-form></app-ticket-form>
-  
-  

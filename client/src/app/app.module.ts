@@ -12,7 +12,7 @@ import {
   MatNativeDateModule,
   MatProgressSpinnerModule,
   MatTableModule,
-  MatToolbarModule
+  MatToolbarModule,
 } from '@angular/material';
 import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
 
@@ -28,6 +28,9 @@ import { RouterModule } from '@angular/router';
 import { AuthInterceptor } from './interceptors/auth.interceptor';
 import { AppRoutingModule } from './app-routing.module';
 import { HomeComponent } from './home/home.component';
+import { ReservationService } from './service/reservation.service';
+import { ProfileComponent } from './profile/profile.component';
+import { ReservationsTableComponent } from './reservation-table/reservation-table.component';
 
 @NgModule({
   declarations: [
@@ -36,7 +39,9 @@ import { HomeComponent } from './home/home.component';
     TicketFormComponent,
     LoginComponent,
     RegisterComponent,
-    HomeComponent
+    HomeComponent,
+    ProfileComponent,
+    ReservationsTableComponent
   ],
   imports: [
     FormsModule,
@@ -62,6 +67,7 @@ import { HomeComponent } from './home/home.component';
   providers: [
     TicketService, 
     CityService,
+    ReservationService,
     { provide: HTTP_INTERCEPTORS, useClass: AuthInterceptor, multi: true }
 
   ],
